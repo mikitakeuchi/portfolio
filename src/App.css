@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background: no-repeat url('./image/header.jpg') center center rgba(255,255,255,0.8);
+  background-size: cover;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+header > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h1{
+  font-size: 5.5rem;
+}
+
+.hakuai{
+  color: #c1e4e9;
+}
+
+/*ナビメニューのスタイルを指定*/
+nav.nav-menu{
+  position: fixed; /*表示位置を固定*/
+  z-index: 2; /*重ね順を変更*/
+  top: 0; /*表示位置を指定*/
+  left: 0; /*表示位置を指定*/
+  background: #fff;/*背景を白にする*/
+  color: #000; /*文字色を黒にする*/
+  text-align: center; /*テキストを中央揃え*/
+  width: 100%; /*全幅表示*/
+  transform: translateY(-100%); /*ナビを上に隠す*/
+  transition: all 0.6s; /*アニメーションの時間を指定*/
+}
+  
+nav.nav-menu ul{
+  background: #c1e4e9; /*背景を白藍色にする*/
+  width: 100%;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+  
+nav.nav-menu ul li{
+  font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+  
+nav.nav-menu ul li:last-child{
+  padding-bottom: 0;
+  border-bottom: none; /*最後のメニュー項目のみ下線を消す*/
+}
+  
+nav.nav-menu ul li a{
+  display: block; /*クリックできる領域を広げる*/
+  padding: 1em 0;
+}
+
+/*トグルボタンが押されたときに付与するクラス*/
+nav.nav-menu.active{
+  transform: translateY(0%);
+}
+
+/*トグルボタンのスタイルを指定*/
+.toggle {
+  display: block;
+  position: fixed;    /* bodyに対しての絶対位置指定 */
+  top: 12px;
+  left: 95%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.toggle div {
+  display: block;
+  position: absolute;
+  width: 30px;
+  border-bottom: solid 3px #000;
+  -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+  -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+  transition: .35s ease-in-out;			/*変化の速度を指定*/
+  left: 6px;
+}
+
+.toggle div:nth-child(1) {
+  top: 9px;
+}
+
+.toggle div:nth-child(2) {
+  top: 18px;
+}
+
+.toggle div:nth-child(3) {
+  top: 27px;
+}
+
+/* 最初のdivをマイナス45度に */
+.toggle.active div:nth-child(1) {
+  top: 18px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.toggle.active div:nth-child(2),
+.toggle.active div:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a:hover{
+  color: #e8c6c1 !important;
+}
+
+.profile-image{
+  width: 12rem;
+}
+
+.works li{
+  width: 32%;
+}
+
+.works div{
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  font-size: medium;
+}
+
+.works p{
+  font-weight: 700;
+  margin: 20px 10px 10px 10px;
+}
+
+.work-no-1{
+  background: no-repeat url('./image/work-no-1.jpg');
+}
+
+.work-no-2{
+  background: no-repeat url('./image/work-no-2.png');
+}
+
+.works-img{
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  background-size: 130%;
+}
+
+.contentsInner{
+  padding: 7.5rem 2rem;
+}
+
+.sub-title{
+  font-size: xx-large;
+  text-align: center;
+  padding: 4rem;
+}
+
